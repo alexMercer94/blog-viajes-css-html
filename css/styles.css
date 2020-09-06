@@ -29,6 +29,82 @@ img {
     max-width: 100%;
 }
 
+/* Header */
+.hero {
+    background-image: url(../img/hero.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; /* Propiedad que da el efecto fixed*/
+}
+
+.header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.barra {
+    background-color: #008fd1;
+    width: 100%;
+    padding: 1rem 1rem;
+    position: absolute;
+    top: 1rem;
+}
+
+.barra .contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .barra .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.logo,
+.navegacion {
+    text-align: center;
+}
+
+.navegacion ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .navegacion {
+        flex: 0 0 20rem;
+    }
+    .navegacion ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2 rem;
+}
+
+.logo-img {
+    max-width: 18rem;
+}
+
+.header-contenido h1 {
+    padding: 0 1rem;
+    color: #008fd1;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    max-width: 25rem;
+}
+
 /* Contenido */
 .contenido {
     background-color: white;
@@ -71,4 +147,119 @@ img {
     .entrada {
         flex: 0 1 calc(33% - 1rem);
     }
+}
+
+/* categorias */
+
+.categorias ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.categorias ul li {
+    flex: 1 0 calc(50%);
+    padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .categorias ul li {
+        flex: 1;
+    }
+}
+
+.categorias ul li:nth-child(1) {
+    background-color: #008fd1;
+}
+.categorias ul li:nth-child(2) {
+    background-color: #db008d;
+}
+.categorias ul li:nth-child(3) {
+    background-color: #9800d1;
+}
+.categorias ul li:nth-child(4) {
+    background-color: #eca300;
+}
+.categorias ul li a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.categorias ul li i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: #008fd1;
+    padding-top: 1rem;
+    color: white;
+}
+
+.footer h2 {
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .contenedor {
+        display: flex;
+    }
+
+    .footer .caja {
+        flex: 1;
+    }
+}
+
+.copyright {
+    background-color: #004d70;
+    margin: 2rem 0 0 0;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Menu redes sociales */
+
+.sociales ul li span {
+    display: none;
+}
+
+.sociales ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.sociales ul li {
+    margin-right: 1rem;
+}
+
+.sociales ul li a {
+    text-decoration: none;
+}
+
+.sociales ul li a:before {
+    font-family: 'Font Awesome 5 Brands';
+    color: white;
+    font-size: 2rem;
+}
+
+.sociales ul li a[href*='facebook.com']::before {
+    content: '\f39e';
+}
+.sociales ul li a[href*='twitter.com']::before {
+    content: '\f099';
+}
+.sociales ul li a[href*='youtube.com']::before {
+    content: '\f167';
+}
+.sociales ul li a[href*='instagram.com']::before {
+    content: '\f16d';
+}
+.sociales ul li a[href*='pinterest.com']::before {
+    content: '\f0d2';
 }
